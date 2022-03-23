@@ -14,6 +14,8 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
+      git config --global credential.helper cache
+    
       git clone https://G14rb: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@github.com/G14rb/streamlit_skf.git
       
       git fetch https://G14rb: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@github.com/G14rb/streamlit_skf.git
