@@ -14,6 +14,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
+      git clone https://github.com/G14rb/streamlit_skf.git
       git remote add origin https://github.com/G14rb/dbt-streamlit
       git config gc.auto 0
       git config --get-all http.https://github.com/G14rb/dbt-streamlit.extraheader
@@ -23,9 +24,7 @@ steps:
       git config http.version HTTP/1.1
       git -c http.extraheader="AUTHORIZATION: basic ***" fetch --force --tags --prune --prune-tags --progress --no-recurse-submodules origin
       
-      git -c http.extraheader="AUTHORIZATION: basic ***" fetch --force --tags --prune --prune-tags --progress --no-recurse-submodules origin  +10f8654f921bc3eaffde6101002116d9dbff13d4
-      
-      git checkout --progress --force 10f8654f921bc3eaffde6101002116d9dbff13d4
+      git checkout --progress --force master
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
