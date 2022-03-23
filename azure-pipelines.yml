@@ -14,7 +14,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      git clone https://github.com/G14rb/streamlit_skf.git
+      git clone https://G14rb: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@github.com/G14rb/streamlit_skf.git
       git remote add origin https://github.com/G14rb/dbt-streamlit
       git config gc.auto 0
       git config --get-all http.https://github.com/G14rb/dbt-streamlit.extraheader
